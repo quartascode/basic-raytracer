@@ -1,15 +1,20 @@
 # Raytracer Basico
-Utiliza somente um núcleo e calcula pixel por pixel squencialmente, do pixel superior esquerdo até o inferior direito.
+Raytracer simples feito a fim de estudos
 
-Tem somente iluminação difusa indireta.
+## Recursos
+- Superficies lambertiânas, materiais metálicos e dielétricos
+- Intersecção de esferas
+- Refração e reflexão total em dielétricos
+- Movimentação da câmera e ponto o qual ela mira
 
-Há somente esferas.
-
-Tem três materiais: lambertiânio, metal e dielétrico.
-Os diéletricos tem refração e reflexão total. Já os metais tem reflexão e "fuzziness".
-
-A câmera pode ser movida para qualquer ponto arbitrário, e pode mirar qualquer ponto também.
-
+## Exemplos
 ![Imagem um](examples/image.jpg)
 
 ![Imagem dois](examples/render.jpg)
+
+## Como compilar
+```sh
+make raytracer && ./raytracer > image.ppm
+```
+
+Pode mudar "image" para qualquer outro nome, mas deve ser .ppm
