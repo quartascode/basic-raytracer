@@ -15,9 +15,9 @@ int main() {
 	Camera camera;
 
 	camera.aspectRatio = 16.0/9;
-	camera.imageWidth = 1920;
-	camera.samplesPerPixel = 1000;
-	camera.rayBounceLimit = 50;
+	camera.imageWidth = 400;
+	camera.samplesPerPixel = 100;
+	camera.rayBounceLimit = 10;
 
 	camera.vFov = 90;
 	camera.lookAt = (Vec3){0, 0, -2.0};
