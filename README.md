@@ -10,6 +10,7 @@ Raytracer simples feito a fim de estudos
 
 ## Exemplos
 > **Obs.:** todos os exemplos são renderizados em 1080p com 1000 samples por pixel e um limite de 50 bounces
+
 ![Imagem um](examples/image.jpg)
 
 ![Imagem dois](examples/image1.jpg)
