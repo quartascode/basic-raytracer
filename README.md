@@ -1,23 +1,23 @@
-# Raytracer Basico
-Raytracer simples feito a fim de estudos
+# Basic Raytracer
+Simple raytracer made with the purpose of studying
 
-## Recursos
-- Superficies lambertiânas, materiais metálicos e dielétricos
-- Intersecção de esferas
-- Refração e reflexão total em dielétricos
-- Movimentação da câmera e ponto o qual ela mira
-- Fov vertical variável
+## Features
+- Lambertian surfaces, metalic and dielectric materials
+- Sphere intersection
+- Refraction and total internal reflection in dielectrics
+- Changeable camera position and target point
+- Changeable vertical fov
 
-## Exemplos
-> **Obs.:** todos os exemplos são renderizados em 1080p com 1000 samples por pixel e um limite de 50 bounces
+## Exemples
+> **Obs.:** all examples are rendered in 1080p with 1000 samples per pixel and a limit of 50 bounces
 
-![Imagem um](examples/render.jpg)
+![Image #1](examples/render.jpg)
 
-![Imagem dois](examples/image1.jpg)
+![Image #2](examples/image1.jpg)
 
-![Imagem três](examples/image2.jpg)
+![Image #3](examples/image2.jpg)
 
-## Como compilar
+## How to compile
 ```sh
 make raytracer && ./raytracer > image.ppm
 ```
