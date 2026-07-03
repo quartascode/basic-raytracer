@@ -10,14 +10,14 @@ int main() {
 	Camera camera;
 
 	camera.aspectRatio = 16.0/9;
-	camera.imageWidth = 1920;
-	camera.samplesPerPixel = 1000;
-	camera.rayBounceLimit = 50;
+	camera.imageWidth = 400;
+	camera.samplesPerPixel = 100;
+	camera.rayBounceLimit = 10;
 
-	camera.vFov = 90;
+	camera.vFov = 40;
 	camera.lookAt = (Vec3){0, 0, -2.0};
 	// 0 4 10
-	camera.lookFrom = (Vec3){0, 0, 3.6};
+	camera.lookFrom = (Vec3){0.0, 0, 0.0};
 	camera.vUp = (Vec3){0, 1, 0};
 
 	// world
@@ -52,7 +52,7 @@ int main() {
 	};
 	Material sphereOne = {
 		.type = LAMBERTIAN,
-		.albedo = (Color){0.0, 0.0, 0.0}
+		.albedo = (Color){0.8, 0.8, 0.8}
 	};
 	Material sphereTwo = {
 		.type = LAMBERTIAN,
@@ -60,20 +60,22 @@ int main() {
 	};
 	Material sphereThree = {
 		.type = LAMBERTIAN,
+		.emissionColor = (Color){1, 1, 1},
+		.emissionStrength = 5,
 		.albedo = (Color){0.8, 0.8, 0.8}
 	};
 
-	Sphere spheres[6] = {
+	Sphere spheres[4] = {
+		{ .center = {50.0, 30, -50}, .radius = 20.0, .material = &sphereThree },
 		{ .center = {1.2, 0, -1.5}, .radius = 0.5, .material = &sphereOne },
 		{ .center = {-1.2, 0, -1.5}, .radius = 0.5, .material = &sphereTwo },
-		{ .center = {0.0, 0, -1}, .radius = 0.5, .material = &sphereThree },
 		{ .center = {0, -100.5, -2}, .radius = 100, .material = &planet },
-		{ .center = {0.0, 0, 2.0}, .radius = 1.5, .material = &glass },
 	};
 
 	World world = {
 		.spheres = spheres,
 		.count = sizeof(spheres) / sizeof(spheres[0]),
+		.lightSorcePos = (Point){50, 30, -50},
 	};
 
 

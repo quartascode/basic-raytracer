@@ -1,4 +1,4 @@
-# Raytracer Basico
+# Raytracer Básico
 
 English: [README.md](README.md)
 

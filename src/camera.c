@@ -1,5 +1,6 @@
 #include "camera.h"
 #include "color.h"
+#include "hittable.h"
 #include "material.h"
 #include "ray.h"
 #include "vec3.h"
@@ -48,6 +49,11 @@ Color RayColor(Ray ray, World world, int rayBounceLimit) {
 	if (WorldHit(ray, &hitInfo, 0.001, INFINITY, world)) {
 		Ray scattered;
 		Color attenuation;
+		Color rayColor = (Vec3){1, 1, 1};
+
+		Vec3 incomingLight = (Vec3){0, 0, 0};
+
+		Ray shadowRay;
 
 		switch (hitInfo.material->type) {
 			case LAMBERTIAN:
@@ -65,13 +71,19 @@ Color RayColor(Ray ray, World world, int rayBounceLimit) {
 					return Vec3Multiply(attenuation, RayColor(scattered, world, rayBounceLimit - 1));
 				}
 				break;
+			case LIGHT_SOURCE:
+				Vec3 emittedLight = Vec3Scale(hitInfo.material->emissionColor, hitInfo.material->emissionStrength);
+				incomingLight = Vec3Add(incomingLight, Vec3Multiply(emittedLight, rayColor));
+				return incomingLight;
 		}
-		return (Color){0, 0, 0};
+	//	return (Color){0, 0, 0};
 	}
 
 	Vec3 unitDirection = Normalize(ray.direction);
 	double a = 0.5 * (unitDirection.y + 1.0);
-	return Vec3Add(Vec3Scale((Color){1.0, 1.0, 1.0}, 1.0 - a), Vec3Scale((Color){0.5, 0.7, 1.0}, a));
+	return Vec3Add(Vec3Scale((Color){1.0, 1.0, 1.0}, 1.0 - a), Vec3Scale((Color){0.4, 0.7, 1.0}, a));
+
+	//return (Color){0, 0, 0};
 }
 
 Vec3 SampleSquare() {

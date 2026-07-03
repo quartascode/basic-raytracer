@@ -5,6 +5,7 @@
 typedef struct {
 	Sphere *spheres;
 	int count;
+	Point lightSorcePos;
 } World;
 
 bool WorldHit(Ray ray, HitInfo *hitInfo, double minT, double maxT, World world);

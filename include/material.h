@@ -8,6 +8,7 @@ typedef enum {
     LAMBERTIAN,
     METAL,
     DIELETRIC,
+    LIGHT_SOURCE,
 } MaterialType;
 
 typedef struct Material{
@@ -16,6 +17,8 @@ typedef struct Material{
     Color albedo;
     double fuzz;
     double refractionIndex;
+    Color emissionColor;
+    double emissionStrength;
 } Material;
 
 bool LambertianScatter(Material lambertian, HitInfo hitInfo, Color *attenuation, Ray *scattered);
