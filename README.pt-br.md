@@ -14,13 +14,16 @@ Raytracer simples feito a fim de estudos
 ## Exemplos
 > **Obs.:** todos os exemplos são renderizados em 1080p com 1000 samples por pixel e um limite de 50 bounces
 
-![Imagem um](examples/render.jpg)
+![Imagem #1](examples/image1.jpg)
 
-![Imagem dois](examples/image1.jpg)
+![Imagem #2](examples/image3.jpg)
 
-![Imagem três](examples/image2.jpg)
+![Imagem #3](examples/image2.jpg)
 
 ## Como compilar
 ```sh
 make raytracer && ./raytracer > image.ppm
 ```
+
+## References
+[Ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html): um ótimo guia que apresente várias técnicas e teorias sobre raytracing

@@ -2,7 +2,7 @@
 
 Português: [README.pt-br.md](README.pt-br.md)
 
-Simple raytracer made with the purpose of studying
+Simple raytracer written in C made with the purpose of studying
 
 ## Features
 - Lambertian surfaces, metalic and dielectric materials
@@ -14,9 +14,9 @@ Simple raytracer made with the purpose of studying
 ## Exemples
 > **Obs.:** all examples are rendered in 1080p with 1000 samples per pixel and a limit of 50 bounces
 
-![Image #1](examples/render.jpg)
+![Image #1](examples/image1.jpg)
 
-![Image #2](examples/image1.jpg)
+![Image #2](examples/image3.jpg)
 
 ![Image #3](examples/image2.jpg)
 
@@ -24,3 +24,6 @@ Simple raytracer made with the purpose of studying
 ```sh
 make raytracer && ./raytracer > image.ppm
 ```
+
+## References
+[Ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html): a guide to writting your own basic raytracer that presented most of the logic used in them
