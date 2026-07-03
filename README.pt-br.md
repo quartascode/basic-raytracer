@@ -25,4 +25,4 @@ make raytracer && ./raytracer > image.ppm
 ```
 
 ## References
-[Ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html): um ótimo guia que apresente várias técnicas e teorias sobre raytracing
+[Ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html): um ótimo guia que apresente várias técnicas e teorias sobre raytracing usadas nesse projeto
