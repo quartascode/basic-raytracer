@@ -2,7 +2,7 @@
 
 English: [README.md](README.md)
 
-Raytracer simples feito a fim de estudos
+Raytracer simples feito em C a fim de estudos
 
 ## Recursos
 - Superficies lambertiânas, materiais metálicos e dielétricos
