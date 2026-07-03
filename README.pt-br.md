@@ -1,6 +1,6 @@
 # Raytracer Basico
 
-🇺🇸 English: [README.md](README.md)
+English: [README.md](README.md)
 
 Raytracer simples feito a fim de estudos
 

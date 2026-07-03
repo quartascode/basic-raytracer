@@ -1,6 +1,6 @@
 # Basic Raytracer
 
-🇧🇷 Português: [README.pt-br.md](README.pt-br.md)
+Português: [README.pt-br.md](README.pt-br.md)
 
 Simple raytracer made with the purpose of studying
 
