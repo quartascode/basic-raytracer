@@ -1,14 +1,9 @@
-#include <math.h>
-#include <stdio.h>
 #include "camera.h"
 #include "material.h"
 #include "vec3.h"
-#include "color.h"
-#include "ray.h"
 #include "sphere.h"
 #include "hittable.h"
 #include "world.h"
-#include "raytracer.h"
 
 int main() {
 	// camera
@@ -48,7 +43,7 @@ int main() {
 	};
 	Material metal = {
 		.type = METAL,
-		.albedo = (Color){0.4, 0.4, 0.4},
+		.albedo = (Color){0.75, 0.75, 0.2},
 		.fuzz = 0.5
 	};
 	Material planet = {
@@ -57,25 +52,25 @@ int main() {
 	};
 	Material sphereOne = {
 		.type = LAMBERTIAN,
-		.albedo = (Color){0.7, 0.7, 0.0}
+		.albedo = (Color){0.0, 0.7, 0.7}
 	};
 	Material sphereTwo = {
 		.type = LAMBERTIAN,
-		.albedo = (Color){0.5, 0.0, 0.5}
+		.albedo = (Color){0.3, 0.0, 0.1}
 	};
 
 	Sphere spheres[6] = {
-		{ .center = {0, -100.5, -2}, .radius = 100, .material = &planet },
-		{ .center = {1.0, 0, -2}, .radius = 0.5, .material = &sphereOne },
-		{ .center = {0.0, 0, -2}, .radius = 0.5, .material = &metal },
-		{ .center = {-1.0, 0, -2}, .radius = 0.5, .material = &sphereTwo },
-		{ .center = {0.5, 0.0, -1.0}, .radius = 0.5, .material = &glass },
-		{ .center = {0.5, 0.0, -1.0}, .radius = 0.4, .material = &insideGlass },
+		{ .center = {1.2, 0, -1.5}, .radius = 0.5, .material = &sphereOne },
+		{ .center = {-1.2, 0, -1.5}, .radius = 0.5, .material = &sphereTwo },
+		{ .center = {0, -100.5, -2}, .radius = 100, .material = &mirror },
+		{ .center = {0.0, 0, -2}, .radius = 0.5, .material = &mirror },
+		{ .center = {0.0, 0, -1}, .radius = 0.5, .material = &glass },
+		{ .center = {0.0, 0, -1}, .radius = 0.4, .material = &insideGlass },
 	};
 
 	World world = {
 		.spheres = spheres,
-		.count = 6,
+		.count = sizeof(spheres) / sizeof(spheres[0]),
 	};
 
 
