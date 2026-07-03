@@ -12,7 +12,6 @@ Simple raytracer written in C made with the purpose of studying
 - Changeable vertical fov
 
 ## Exemples
-> **Obs.:** all examples are rendered in 1080p with 1000 samples per pixel and a limit of 50 bounces
 
 ![Image #1](examples/image1.jpg)
 
