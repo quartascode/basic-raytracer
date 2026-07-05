@@ -24,5 +24,5 @@ Raytracer simples feito em C a fim de estudos
 make raytracer && ./raytracer > image.ppm
 ```
 
-## References
+## Referências
 [Ray tracing in one weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html): um ótimo guia que apresente várias técnicas e teorias sobre raytracing usadas nesse projeto
