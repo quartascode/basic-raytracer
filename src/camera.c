@@ -78,12 +78,10 @@ Color RayColor(Ray ray, World world, int rayBounceLimit) {
 		}
 	//	return (Color){0, 0, 0};
 	}
-/*
 	Vec3 unitDirection = Normalize(ray.direction);
 	double a = 0.5 * (unitDirection.y + 1.0);
 	return Vec3Add(Vec3Scale((Color){1.0, 1.0, 1.0}, 1.0 - a), Vec3Scale((Color){0.4, 0.7, 1.0}, a));
-*/
-	return (Color){0, 0, 0};
+	//return (Color){0, 0, 0};
 }
 
 Vec3 SampleSquare() {

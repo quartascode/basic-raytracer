@@ -17,7 +17,7 @@ Simple raytracer written in C made with the purpose of studying
 
 ![Image #2](examples/image3.jpg)
 
-![Image #3](examples/image2.jpg)
+![Image #3](examples/image5.jpg)
 
 ## How to compile
 ```sh
