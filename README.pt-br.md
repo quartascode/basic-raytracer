@@ -17,7 +17,7 @@ Raytracer simples feito em C a fim de estudos
 
 ![Imagem #2](examples/image3.jpg)
 
-![Imagem #3](examples/image5.jpg)
+![Imagem #3](examples/image4.jpg)
 
 ## Como compilar
 ```sh
