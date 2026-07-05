@@ -2,7 +2,7 @@
 
 Português: [README.pt-br.md](README.pt-br.md)
 
-Simple raytracer written in C made with the purpose of studying
+Simple raytracer written in C made with the purpose of learning
 
 ## Features
 - Lambertian surfaces, metalic and dielectric materials
