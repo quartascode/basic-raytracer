@@ -11,7 +11,7 @@ Simple raytracer written in C made with the purpose of learning
 - Changeable camera position and target point
 - Changeable vertical fov
 
-## Exemples
+## Examples
 
 ![Image #1](examples/image1.jpg)
 
